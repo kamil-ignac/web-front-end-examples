@@ -21,5 +21,5 @@ Snippet code: [https://github.com/kamil-ignac/web-front-end-examples/blob/main/r
     - use `shallowEqual`
     - **Key answer:** avoid recalculating and returning new object references unnecessarily
 
-### 4. What if selectedId stays the same, but the users array gets a new reference because of another reducer — what happens?
+### 4. What if `selectedId` stays the same, but the users array gets a new reference because of another reducer — what happens?
 - The selector runs again, `find()` runs again, and the component may re-render even though the visible data didn’t actually change ... because React Redux compares by reference and if a new object is returned, it assumes the data changed.
